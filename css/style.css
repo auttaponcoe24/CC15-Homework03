@@ -15,7 +15,6 @@ a:hover {
 
 button {
     padding: 8px 12px;
-    flex-shrink: 0;
     border-radius: 2px;
     background-color: #ff6464;
     color: #ffffff;
@@ -26,11 +25,11 @@ button {
 main {
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
-header .container {
+.container {
     display: flex;
     flex-direction: column;
     padding: 2rem 0;
@@ -48,11 +47,11 @@ nav a{
     font-size: 18px;
 }
 
-.header-b {
+.header-Bottom {
     display: flex;
     margin: 0 2rem;
 }
-.header-b .header-left {
+.header-left {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -92,17 +91,14 @@ nav a{
 .cards {
     display: flex;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
-    flex-shrink: 0;
-    overflow: scroll;
+    flex: 1 1 100%;
     gap: 1rem;
 }
 .card {
-    width: 350px;
+    width: 280px;
     height: 300px;
     display: flex;
     flex-shrink: 0;
-    
     flex-direction: column;
     justify-content: space-evenly;
     background-color: #ffffff;
@@ -179,6 +175,7 @@ footer .icons {
     font-size: 2rem;
 }
 
+
 /* page Blog */
 
 .section-blog {
@@ -204,7 +201,6 @@ footer .icons {
 
 .contact {
     margin: 0 auto;
-    max-width: 1000px;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -215,7 +211,7 @@ footer .icons {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .contact-right form > input {
@@ -235,3 +231,132 @@ footer .icons {
     padding: 10px 8px;
 }
 
+/* screen tablet: 768px*/
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+    nav {
+        justify-content: space-evenly;
+    }
+    /* nav a {
+        background-color: #ff6464;
+        border-bottom: 1px solid #ff6464;
+        text-align: center;
+        flex: 1 1 100%;
+        width: 100%;
+        padding: 1rem;
+    } */
+    nav a {
+        border-bottom: 1px solid #ff6464;
+        text-align: center;
+        width: 100%;
+        padding: 1rem;
+    }
+    nav a:hover {
+        background-color: #ff6464;
+        color: white;
+    }
+
+    .header-left  {
+        align-items: center ;
+    }
+
+    .cards {
+        overflow: scroll;
+    }
+    .card h1 {
+        font-size: 24px;
+    }
+
+    .section-works > p {
+        text-align: center;
+    }
+
+    .section-work {
+        margin-top: 2rem;
+    }
+
+    .contact {
+        margin-top: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .contact-left {
+        align-items: center;
+    }
+    .contact-right form  {
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        padding: 0;
+    }
+    nav {
+        justify-content: space-evenly;
+    }
+
+    .header-Top {
+        flex-direction: column;
+    }
+    nav a {
+        background-color: #ff6464;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        color: #ffffff;
+    }
+
+    nav a:hover {
+        background-color: white;
+        color: #ff6464;
+    }
+
+    .header-Bottom {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .header-left  {
+        align-items: center ;
+    }
+
+    .cards {
+        overflow: scroll;
+    }
+    .card h1 {
+        font-size: 24px;
+    }
+
+    .section-works > p {
+        text-align: center;
+    }
+
+    .section-work {
+        margin-top: 2rem;
+
+    }
+    .box-work {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact {
+        margin-top: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .contact-left {
+        align-items: center;
+    }
+    .contact-right form  {
+        text-align: center;
+    }
+}
+}
